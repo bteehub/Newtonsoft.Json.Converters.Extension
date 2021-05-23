@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net45;net40;netstandard1.0;netstandard1.3;netstandard2.0</TargetFrameworks>
+		<LangVersion>9.0</LangVersion>
+		<Nullable>enable</Nullable>
+		<PackageProjectUrl>https://github.com/bteehub/Newtonsoft.Json.Converters.Extension</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/bteehub/Newtonsoft.Json.Converters.Extension</RepositoryUrl>
+		<Description>Extends the Newtonsoft.Json converters with the possibility to convert to and from milliseconds since Unix epoch</Description>
+		<Authors>btee</Authors>
+		<Company />
+		<Version>1.0.0</Version>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)'=='net45'">
+		<DefineConstants>HAVE_FULL_REFLECTION</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)'=='net40'">
+		<DefineConstants>HAVE_FULL_REFLECTION</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'netstandard1.0'">
+		<DefineConstants></DefineConstants>
+	</PropertyGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
+	</ItemGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
+		<DefineConstants></DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<DefineConstants>HAVE_FULL_REFLECTION</DefineConstants>
+	</PropertyGroup>
+
+</Project>
