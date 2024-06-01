@@ -9,12 +9,12 @@
 		<Description>Extends the Newtonsoft.Json converters</Description>
 		<Authors>btee</Authors>
 		<Company />
-		<Version>1.0.1</Version>
-		<AssemblyVersion>1.0.1.0</AssemblyVersion>
+		<Version>1.0.2</Version>
+		<AssemblyVersion>1.0.2.0</AssemblyVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net45'">
